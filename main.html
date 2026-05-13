@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HermannVillar</title>
+    <link rel="stylesheet" href="style/main.css">
+    <script src="scrip/scripts.js" defer></script>
+
+</head>
+<body>
+    <div class="controles">
+            <div class="botones">
+                <label for="nombre">Buscador</label>
+                <input id="buscador" type="text" placeholder="Escribe pintor o cuadro...">
+                <button id="buscar">Buscar</button>
+                <button id="abrirModalTarjeta">Añadir cuadro</button>
+                <label for="modo">Cambiar modo</label>
+                 <select id="modo">
+                    <option value="diurno">Diurno</option>
+                    <option value="nocturno">Nocturno</option>
+                    <option value="personalizado">Personalizado</option>
+                 </select>
+            </div>
+    </div>
+
+    <div class="contenedor">
+        <div class="tarjeta">
+            <div class="imagen">
+            <img src="img/botticelli.jpg" alt="Sandro Botticelli"/>
+            </div>
+            <div class="pie">
+            <h3>Sandro Botticelli</h3>
+            <h4>El nacimiento de venus</h4>
+            <p>1486</p>
+            </div>
+        </div>
+        <div class="tarjeta">
+            <div class="imagen">
+            <img src="img/cabanel.jpg" alt="Alexandre Cabanel"/>
+            </div>
+            <div class="pie">
+            <h3>Alexandre Cabanel</h3>
+            <h4>Angel caido</h4>
+            <p>1847</p>
+            </div>
+        </div>
+        <div class="tarjeta">
+            <div class="imagen">
+            <img src="img/dali.jpg" alt="Salvador Dali"/>
+            </div>
+            <div class="pie">
+            <h3>Salvador Dali</h3>
+            <h4>La persistencia de la memoria</h4>
+            <p>1931</p>
+            </div>
+        </div>
+        <div class="tarjeta">
+            <div class="imagen">
+            <img src="img/daVinci.jpg" alt="Leonardo DaVinci"/>
+            </div>
+            <div class="pie">
+            <h3>Leonardo DaVinci</h3>
+            <h4>Mona Lisa</h4>
+            <p>1506</p>
+            </div>
+        </div>
+        <div class="tarjeta">
+            <div class="imagen">
+            <img src="img/michelangelo.jpg" alt="Michelangelo"/>
+            </div>
+            <div class="pie">
+            <h3>Michelangelo</h3>
+            <h4>La creacion de adan</h4>
+            <p>1512</p>
+            </div>
+        </div>
+        <div class="tarjeta">
+            <div class="imagen">
+            <img src="img/monet.jpg" alt="Claude Monet"/>
+            </div>
+            <div class="pie">
+            <h3>Claude Monet</h3>
+            <h4>Mujer con sombrilla</h4>
+            <p>1875</p>
+            </div>
+        </div>
+        <div class="tarjeta">
+            <div class="imagen">
+            <img src="img/picasso.jpg" alt="Pablo Picasso"/>
+            </div>
+            <div class="pie">
+            <h3>Pablo Picasso</h3>
+            <h4>El vijeo guitarrista</h4>
+            <p>1904</p>
+            </div>
+        </div>
+        <div class="tarjeta">
+            <div class="imagen">
+            <img src="img/vangogh.jpg" alt="Vincent van Gogh"/>
+            </div>
+            <div class="pie">
+            <h3>Vincent van Gogh</h3>
+            <h4>Noche estrella</h4>
+            <p>1931</p>
+            </div>
+        </div>
+    </div>
+    <div id="modalPersonalizado" class="modal">
+      <div class="modal-contenido">
+            <h3>Personalizar colores</h3>
+            <label>Encabezado: <input type="color" id="colorHeader"></label>
+            <label>Cuerpo: <input type="color" id="colorMain"></label>
+            <label>Pie de pagina: <input type="color" id="colorFooter"></label>
+            <div class="modal-botones">
+            <button id="aplicarColores">Aplicar</button>
+            <button id="cerrarModal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+    <div id="modalTarjeta" class="modal">
+    <div class="modal-contenido">
+        <h3>Nueva tarjeta</h3>
+        <label>Pintor:</label>
+        <input type="text" id="inputPintor">
+        <label>Obra:</label>
+        <input type="text" id="inputObra">
+        <label>Año:</label>
+        <input type="text" id="inputAño">
+        <label>Imagen (nombre archivo):</label>
+        <input type="file" id="inputImagen" accept="image/*">
+        <div class="modal-botones">
+         <button id="crearTarjeta">Crear</button>
+         <button id="cerrarModalTarjeta">Cancelar</button>
+        </div>
+  </div>
+</div>
+
+<footer>
+        <p>by HermannVillar ® 2026</p>
+</footer>
+</body>
+</html>

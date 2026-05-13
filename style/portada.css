@@ -1,0 +1,290 @@
+/* =========================================================
+   RESET GENERAL
+   ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   VARIABLES DE DISEÑO
+   ========================================================= */
+:root {
+    --bg: #ffffff;
+    --text: #000000;
+    --border: #dddddd;
+}
+
+/* =========================================================
+   ESTILO GLOBAL
+   ========================================================= */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* =========================================================
+   HEADER (LOGO + NOMBRE)
+   ========================================================= */
+.header, .header* {
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    z-index: 10;
+}
+
+/* Contenedor logo + texto */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Logo */
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Título del portfolio */
+.titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    display: flex;
+}
+
+/* Hermann (peso ligero) */
+.normal {
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Villar (peso fuerte) */
+.bold {
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* =========================================================
+   HERO SECTION (PRESENTACIÓN PRINCIPAL)
+   ========================================================= */
+
+.hero {
+    position: relative;
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* IMAGEN DEL HERO (AQUÍ VA EL ZOOM) */
+.hero-imagen {
+    position: absolute;
+    inset: 0;
+
+    background-image: url("../img/hero.jpg");
+    background-size: cover;
+    background-position: center;
+
+    animation: zoomHero 20s infinite alternate ease-in-out;
+    transform-origin: center bottom;
+}
+
+/* CAPA OSCURA PARA LEGIBILIDAD */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+/* CONTENIDO DEL HERO */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    opacity: 0;
+}
+
+/* TEXTOS ANIMADOS */
+.t1 {
+    animation: fadeInText 1s forwards;
+    animation-delay: 0.5s;
+}
+
+.t2 {
+    animation: fadeInText 1s forwards;
+    animation-delay: 2s;
+}
+
+.t3 {
+    animation: fadeInText 1s forwards;
+    animation-delay: 3.5s;
+}
+
+/* =========================================================
+   LAYOUT PRINCIPAL (SIDEBAR + GALERÍA)
+   ========================================================= */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =========================================================
+   NAVEGACIÓN LATERAL
+   ========================================================= */
+.sidebar {
+    width: 220px;
+    padding: 20px;
+    border-right: 1px solid var(--border);
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 10px 15px;
+    border: 1px solid transparent;
+}
+
+.sidebar li:hover {
+    background: black;
+    color: white;
+}
+
+/* =========================================================
+   GALERÍA DE PROYECTOS (GRID)
+   ========================================================= */
+.galeria {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 40px;
+}
+
+/* =========================================================
+   TARJETAS (EFECTO VISUAL PRINCIPAL)
+   ========================================================= */
+.tarjeta {
+    background: transparent;
+    border: none;
+    transition: transform 0.4s ease;
+}
+
+/* Hover de tarjeta */
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+/* Imagen dentro de la tarjeta */
+.imagen {
+    overflow: hidden;
+}
+
+.imagen img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: all 0.4s ease;
+}
+
+/* Hover imagen */
+.tarjeta:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+/* =========================================================
+   TEXTO DE LAS TARJETAS
+   ========================================================= */
+.pie {
+    margin-top: 10px;
+}
+
+.pie h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.pie h4 {
+    font-size: 1rem;
+    color: #555;
+}
+
+.pie p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid var(--border);
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+/* Tablet */
+@media (max-width: 900px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Móvil */
+@media (max-width: 500px) {
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomHero {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}

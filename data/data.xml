@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<galeria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="data.xsd">
+    <obra id="1">
+        <pintor>Sandro Botticelli</pintor>
+        <nombre>El nacimiento de venus</nombre>
+        <anio>1486</anio>
+        <imagen>img/botticelli.jpg</imagen>
+    </obra>
+
+    <obra id="2">
+        <pintor>Alexandre Cabanel</pintor>
+        <nombre>Angel caido</nombre>
+        <anio>1847</anio>
+        <imagen>img/cabanel.jpg</imagen>
+    </obra>
+
+    <obra id="3">
+        <pintor>Salvador Dalí</pintor>
+        <nombre>La persistencia de la memoria</nombre>
+        <anio>1931</anio>
+        <imagen>img/dali.jpg</imagen>
+    </obra>
+
+    <obra id="4">
+        <pintor>Leonardo Da Vinci</pintor>
+        <nombre>Mona Lisa</nombre>
+        <anio>1506</anio>
+        <imagen>img/daVinci.jpg</imagen>
+    </obra>
+
+    <obra id="5">
+        <pintor>Michelangelo</pintor>
+        <nombre>La creacion de adan</nombre>
+        <anio>1512</anio>
+        <imagen>img/michelangelo.jpg</imagen>
+    </obra>
+
+    <obra id="6">
+        <pintor>Claude Monet</pintor>
+        <nombre>Mujer con sombrilla</nombre>
+        <anio>1875</anio>
+        <imagen>img/monet.jpg</imagen>
+    </obra>
+
+    <obra id="7">
+        <pintor>Pablo Picasso</pintor>
+        <nombre>El viejo guitarrista</nombre>
+        <anio>1904</anio>
+        <imagen>img/picasso.jpg</imagen>
+    </obra>
+
+    <obra id="8">
+        <pintor>Vincent van Gogh</pintor>
+        <nombre>Noche estrellada</nombre>
+        <anio>1889</anio>
+        <imagen>img/vangogh.jpg</imagen>
+    </obra>
+
+</galeria>

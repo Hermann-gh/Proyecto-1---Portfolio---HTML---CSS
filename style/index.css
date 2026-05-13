@@ -1,0 +1,157 @@
+/* ========================= RESET ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========================= VARIABLES ========================= */
+:root {
+    --main-color: #ffffff;
+    --text-color: #000;
+    --button-bg: transparent;
+    --button-border: #000;
+    --button-hover-bg: #000;
+    --button-hover-color: #fff;
+}
+
+/* ========================= BODY ========================= */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ========================= CABECERA ========================= */
+.cabecera {
+    text-align: center;
+    margin-bottom: 40px;
+
+    /* Animación */
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeSlideDown 1s forwards;
+    animation-delay: 1s;
+}
+
+.cabecera h1 {
+    font-size: 3rem;
+}
+
+.cabecera .fina {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+}
+
+.cabecera .negrita {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* ========================= logo ========================= */
+
+.logo {
+    width: 280px;
+    height: auto;
+    margin-bottom: 20px;
+
+    /* Animación */
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeZoom 1s forwards;
+    animation-delay: 0.2s;
+}
+
+/* ========================= CONTENEDOR PRINCIPAL ========================= */
+.contenedor {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    /* Animación */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeSlideUp 1s forwards;
+    animation-delay: 1.2s;
+}
+
+/* ========================= BOTÓN ========================= */
+button#entrar {
+    padding: 10px 20px;
+    border: 1px solid var(--button-border);
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    /* Animación */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideUp 1s forwards;
+    animation-delay: 3s;
+}
+
+button#entrar:hover {
+    background-color: var(--button-hover-bg);
+    color: var(--button-hover-color);
+}
+
+/* ========================= TIPOGRAFÍA ========================= */
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    opacity: 0;
+    animation: fadeSlideUp 1s forwards;
+    animation-delay: 2.2s;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #555;
+    opacity: 0;
+    animation: fadeSlideUp 1s forwards;
+    animation-delay: 2.5s;
+}
+
+/* ========================= ANIMACIONES ========================= */
+@keyframes fadeSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

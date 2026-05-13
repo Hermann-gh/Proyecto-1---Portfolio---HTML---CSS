@@ -1,0 +1,198 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header-color: #ffffff;
+    --main-color: #ffffff;
+    --footer-color: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--main-color);
+    color: #000;
+}
+
+.controles {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.botones {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+input, select {
+    padding: 8px;
+    border: 1px solid #000;
+    background: none;
+}
+
+button {
+    background: none;
+    border: 1px solid black;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: black;
+    color: white;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 40px;
+}
+
+.tarjeta {
+    background: transparent;
+    border: none;
+    transition: transform 0.4s ease;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.imagen {
+    overflow: hidden;
+}
+
+.imagen img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: all 0.4s ease;
+}
+
+.tarjeta:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.pie {
+    margin-top: 10px;
+}
+
+.pie h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.pie h4 {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.pie p {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.6);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-botones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.galeria-imagenes {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.img-opcion {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.img-opcion:hover {
+    border: 2px solid black;
+}
+
+.img-seleccionada {
+    border: 2px solid red;
+}
+
+/* Preview */
+#previewImagen {
+    margin-top: 10px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Modos */
+body.nocturno {
+    background: #111;
+    color: white;
+}
+
+body.nocturno button {
+    border: 1px solid white;
+    color: white;
+}
+
+body.nocturno button:hover {
+    background: white;
+    color: black;
+}
+
+body.personalizado {
+    background: var(--main-color);
+}
+
+body.personalizado .controles {
+    background: var(--header-color);
+}
+
+body.personalizado footer {
+    background: var(--footer-color);
+}
