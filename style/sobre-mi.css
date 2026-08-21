@@ -88,6 +88,7 @@ nav a:hover {
 /* IMAGEN */
 .img {
     flex: 1;
+    height: 350px;
     overflow: hidden;
 }
 
