@@ -45,16 +45,17 @@ body {
     font-weight: 700;
 }
 
-/* BOTÓN HEADER */
-.btn-inicio {
+/* NAVEGADOR */
+
+nav a {
+    text-decoration: none;
+    color: black;
     padding: 10px 15px;
-    border: 1px solid black;
-    background: transparent;
-    cursor: pointer;
+    border: 1px solid transparent;
     transition: 0.3s;
 }
 
-.btn-inicio:hover {
+nav a:hover {
     background: black;
     color: white;
 }

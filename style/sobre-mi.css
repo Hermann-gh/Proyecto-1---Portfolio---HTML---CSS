@@ -17,7 +17,7 @@ body {
 }
 
 /* =========================================================
-   HEADER (IGUAL CONTACTO)
+   HEADER
 ========================================================= */
 .header {
     display: flex;
@@ -64,6 +64,69 @@ nav a:hover {
 }
 
 /* =========================================================
+   HERO
+========================================================= */
+.hero {
+    position: relative;
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* IMAGEN */
+.hero-imagen {
+    position: absolute;
+    inset: 0;
+
+    background-image: url("../img/heroSM.jpg");
+    background-size: cover;
+    background-position: center;
+
+    animation: zoomHero 20s infinite alternate ease-in-out;
+    transform-origin: center bottom;
+}
+
+/* CAPA OSCURA */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* TEXTO */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    opacity: 0;
+}
+
+/* ANIMACIÓN DE LOS TEXTOS */
+.t1 {
+    animation: fadeInText 1s forwards;
+    animation-delay: 0.5s;
+}
+
+.t2 {
+    animation: fadeInText 1s forwards;
+    animation-delay: 2s;
+}
+
+.t3 {
+    animation: fadeInText 1s forwards;
+    animation-delay: 3.5s;
+}
+
+/* =========================================================
    CONTENIDO
 ========================================================= */
 .contenido {
@@ -78,11 +141,6 @@ nav a:hover {
     display: flex;
     align-items: center;
     gap: 40px;
-}
-
-/* BLOQUE INVERSO */
-.reverse {
-    flex-direction: row-reverse;
 }
 
 /* IMAGEN */
@@ -114,7 +172,7 @@ nav a:hover {
 }
 
 /* =========================================================
-   SECCIÓN EXTRA
+   SECCIÓN EXPERIENCIA
 ========================================================= */
 .extra {
     padding: 60px;
@@ -132,6 +190,31 @@ nav a:hover {
 }
 
 /* =========================================================
+   ANIMACIONES
+========================================================= */
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomHero {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+/* =========================================================
    RESPONSIVE
 ========================================================= */
 @media (max-width: 768px) {
@@ -140,12 +223,16 @@ nav a:hover {
         flex-direction: column;
     }
 
-    .reverse {
-        flex-direction: column;
-    }
-
     nav {
         display: flex;
         flex-wrap: wrap;
+    }
+
+    .hero {
+        height: 40vh;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
     }
 }
